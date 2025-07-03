@@ -1,0 +1,17 @@
+--index-url https://download.pytorch.org/whl/cu121
+--extra-index-url https://pypi.org/simple
+torch==2.4.1
+torchvision==0.19.1
+torchaudio==2.4.1
+matplotlib
+diffusers
+hydra-core
+omegaconf
+accelerate
+scipy
+piq==0.8.0
+prettytable==3.10.0
+wandb
+imageio==2.34.2
+pandas
+POT

@@ -1,0 +1,7 @@
+ddsmc.egg-info/
+**/__pycache__
+*.ipynb
+gmm/toy_figures
+gmm/toy_figures_debug
+d3pm/
+protein/
