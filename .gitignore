@@ -1,3 +1,4 @@
+.vscode/
 ddsmc.egg-info/
 **/__pycache__
 *.ipynb

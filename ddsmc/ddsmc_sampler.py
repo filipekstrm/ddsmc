@@ -214,8 +214,7 @@ class DDSMCImage(DDSMC):
     """
         Implementation of DDSMC for images
     """
-    def __init__(self, smc_config, annealing_scheduler_config, diffusion_scheduler_config, device, eta, reconstruct_fn, rt_scheduler_config, 
-                 adaptive_forward_sigma=None):
+    def __init__(self, smc_config, annealing_scheduler_config, diffusion_scheduler_config, device, eta, reconstruct_fn, rt_scheduler_config):
         """
             Initializes the DDSMC sampler with the given configurations.
 
@@ -231,14 +230,10 @@ class DDSMCImage(DDSMC):
         self.annealing_scheduler = Scheduler(**annealing_scheduler_config)
         self.diffusion_scheduler_config = diffusion_scheduler_config
         self.rho_t = Scheduler(**rt_scheduler_config).sigma_steps[::-1]
-        #self.rho_t = self.annealing_scheduler.sigma_steps[::-1] / np.sqrt(1.3)
         
-        self.adaptive_forward_sigma = adaptive_forward_sigma
-        assert self.adaptive_forward_sigma in ["alt2", "alt3"] or self.adaptive_forward_sigma is None
         
         recond_fns = {"ode": self.ode_reconstruct, "tweedie": self.tweedie_reconstruct}
         self._reconstruct = recond_fns[reconstruct_fn]
-        # self.visualization_dir = f"visualize_x0hat_{self.annealing_scheduler.num_steps}_{self.diffusion_scheduler_config.num_steps}_{rt_scheduler_config.sigma_max}"
         
     def _check(self, annealing_scheduler_config, diffusion_scheduler_config, rt_scheduler_config):
         """
