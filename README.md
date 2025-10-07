@@ -11,14 +11,20 @@ See the respective READMEs for information on how to install and run the corresp
 ## Citation
 If using DDSMC, please cite our paper
 ```
-@inproceedings{
-      kelvinius2025solving,
-      title={Solving Linear-Gaussian Bayesian Inverse Problems with Decoupled Diffusion Sequential Monte Carlo},
-      author={Filip Ekstr{\"o}m Kelvinius and Zheng Zhao and Fredrik Lindsten},
-      booktitle={Forty-second International Conference on Machine Learning},
-      year={2025},
-      url={https://openreview.net/forum?id=QRNpmG8XGd}
+@InProceedings{pmlr-v267-ekstrom-kelvinius25b,
+  title = 	 {Solving Linear-{G}aussian {B}ayesian Inverse Problems with Decoupled Diffusion Sequential {M}onte {C}arlo},
+  author =       {Ekstr\"{o}m Kelvinius, Filip and Zhao, Zheng and Lindsten, Fredrik},
+  booktitle = 	 {Proceedings of the 42nd International Conference on Machine Learning},
+  pages = 	 {15148--15181},
+  year = 	 {2025},
+  editor = 	 {Singh, Aarti and Fazel, Maryam and Hsu, Daniel and Lacoste-Julien, Simon and Berkenkamp, Felix and Maharaj, Tegan and Wagstaff, Kiri and Zhu, Jerry},
+  volume = 	 {267},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {13--19 Jul},
+  publisher =    {PMLR},
+  url = 	 {https://proceedings.mlr.press/v267/ekstrom-kelvinius25b.html},
 }
+
 ```
 
 Remeber also to cite any other algorithms that you have used in the GMM experiment (see their corresponding README in `toy_data/[ALGORITHM]/README.md`), and to cite DCPS if you have been using the image experiments code (see [image README](image/README)).
